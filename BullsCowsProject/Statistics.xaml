@@ -1,0 +1,95 @@
+﻿<Window x:Class="BullsCowsProject.Statistics"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    Width="538.806" Height="279.478">
+
+    <Window.Resources>
+        <Style TargetType="TextBlock" x:Name="HeaderStyle">
+            <Setter Property="HorizontalAlignment" Value="Center" />
+            <Setter Property="FontWeight" Value="Bold" />
+            <Setter Property="FontSize" Value="13" />
+        </Style>
+
+        <Style TargetType="Border" x:Name="HeaderBorderStyle">
+            <Setter Property="Margin" Value="3" />
+            <Setter Property="BorderThickness" Value="1" />
+            <Setter Property="CornerRadius" Value="10" />
+            <Setter Property="BorderBrush" Value="#FF93A5FF" />
+            <Setter Property="Background">
+                <Setter.Value>
+                    <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
+                        <GradientStop Color="#FFEFF2FF" Offset="0" />
+                        <GradientStop Color="#FF93A5FF" Offset="1" />
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style TargetType="ListBox" x:Key="GameGridListBoxStyle">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="ListBox">
+                        <Grid>
+                            <ItemsPresenter />
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style TargetType="ListBoxItem" x:Key="GameGridItemStyle">
+            <Setter Property="Padding" Value="0" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="ListBoxItem">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition />
+                                <ColumnDefinition />
+                                <ColumnDefinition />
+                            </Grid.ColumnDefinitions>
+
+                            <TextBlock Grid.Column="0" Text="{Binding Path=Name}" TextAlignment="Center" />
+                            <TextBlock Grid.Column="1" Text="{Binding Path=Move}" TextAlignment="Center" />
+                            <TextBlock Grid.Column="2" Text="{Binding Path=Datetime}" TextAlignment="Center" />
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+
+    <Grid Margin="0,0,4,4">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Border Grid.Column="0" Grid.Row="0" >
+            <TextBlock >Name</TextBlock>
+        </Border>
+
+        <Border Grid.Column="1" Grid.Row="0" >
+            <TextBlock >Moves</TextBlock>
+        </Border>
+
+        <Border Grid.Column="2" Grid.Row="0" >
+            <TextBlock >Medal</TextBlock>
+        </Border>
+
+        <Border Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3"
+            BorderThickness="1" BorderBrush="#FFA3B4FF" CornerRadius="5" Background="#FFFCFDFF" Opacity="0.7">
+            <ScrollViewer x:Name="MainScrollViewer" VerticalScrollBarVisibility="Auto" Margin="1" BorderThickness="0">
+                <ListBox x:Name="DataListBox" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="3"
+                 Style="{StaticResource GameGridListBoxStyle}" ItemContainerStyle="{StaticResource GameGridItemStyle}"
+                 ItemsSource="{Binding}" Height="201" Width="462" />
+            </ScrollViewer>
+        </Border>
+    </Grid>
+</Window>

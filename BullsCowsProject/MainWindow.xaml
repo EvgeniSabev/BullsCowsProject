@@ -1,0 +1,24 @@
+﻿<Window x:Class="BullsCowsProject.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Bulls and Cows Game" Height="363" Width="500.789" ResizeMode="CanMinimize" Icon="Resources/icon.png">
+
+    <Grid Background="#FFCD205F" Margin="0,0,-6,-2">
+        <TextBox x:Name="inputTextBox" HorizontalAlignment="Left" Height="41" Margin="37,112,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="122" ToolTip="Enter 4 numbers" PreviewKeyDown="inputTextBox_PreviewKeyDown" PreviewTextInput="inputTextBox_PreviewTextInput" DataObject.Pasting="inputTextBox_TextBoxPasting" RenderTransformOrigin="0.839,1.006"/>
+        <Button x:Name="checkButton" Content="Let's See" ToolTip="Check the number" HorizontalAlignment="Left" Margin="37,171,0,0" VerticalAlignment="Top" Width="122" Height="34" FontFamily="Cooper Black" FontWeight="Medium" FontSize="18" Background="#FF6F52D1" Click="checkButton_Click" Panel.ZIndex="1" BorderBrush="#FF499C41"/>
+        <Label x:Name="TitleLabel" Content="Bulls and cows" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="54,10,0,0" Height="50" Width="225" FontSize="27" FontWeight="Bold" FontFamily="SketchFlow Print" RenderTransformOrigin="0.5,0.5"/>
+        <Image x:Name="bull" HorizontalAlignment="Left" Height="55" VerticalAlignment="Top" Width="52" RenderTransformOrigin="0.5,1" Margin="200,65,0,0" Stretch="UniformToFill" Source="Resources/bull.png"/>
+        <Image x:Name="cow" HorizontalAlignment="Left" Height="64" VerticalAlignment="Top" Width="51" RenderTransformOrigin="0.5,1" Margin="201,125,0,0" Source="Resources/cow.png"/>
+        <Image x:Name="bull2" HorizontalAlignment="Left" Height="55" VerticalAlignment="Top" Width="52" RenderTransformOrigin="0.5,1" Margin="268,65,0,0" Stretch="UniformToFill" Source="Resources/bull.png"/>
+        <Image x:Name="bull3" HorizontalAlignment="Left" Height="55" VerticalAlignment="Top" Width="52" RenderTransformOrigin="0.15,0.40" Margin="339,65,0,0" Stretch="UniformToFill" Source="Resources/bull.png"/>
+        <Image x:Name="bull4" HorizontalAlignment="Left" Height="55" VerticalAlignment="Top" Width="52" RenderTransformOrigin="0.5,1" Margin="408,65,0,0" Stretch="UniformToFill" Source="Resources/bull.png"/>
+        <Image x:Name="cow2" HorizontalAlignment="Left" Height="64" VerticalAlignment="Top" Width="51" RenderTransformOrigin="0.5,1" Margin="268,125,0,0" Source="Resources/cow.png"/>
+        <Image x:Name="cow3" HorizontalAlignment="Left" Height="64" VerticalAlignment="Top" Width="51" RenderTransformOrigin="0.5,1" Margin="339,125,0,0" Source="Resources/cow.png"/>
+        <Image x:Name="cow4" HorizontalAlignment="Left" Height="64" VerticalAlignment="Top" Width="51" RenderTransformOrigin="0.5,1" Margin="409,125,0,0" Source="Resources/cow.png"/>
+        <ListBox x:Name="historyListBox" Margin="37,227,0,12" HorizontalAlignment="Left" Width="423"/>
+        <Label x:Name="HistoryLabel" Content="Game History" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="268,194,0,0" Height="28" Width="160" FontSize="20" FontWeight="Bold" FontFamily="SketchFlow Print"/>
+        <Label x:Name="randomNumLabel" Content="Label" HorizontalAlignment="Left" Margin="159,194,0,0" VerticalAlignment="Top" Panel.ZIndex="0"/>
+        <Button x:Name="InfoButton" Content="Info" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="301,10,0,0" Height="27" RenderTransformOrigin="1, 1" FontSize="14" Click="InfoButton_Click"/>
+        <Button Content="Statistics" HorizontalAlignment="Left" Margin="385,10,0,0" Height="27" VerticalAlignment="Top" Width="75" RenderTransformOrigin="1, 1" FontSize="14" Click="Button_Click"/>
+    </Grid>
+</Window>

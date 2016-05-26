@@ -1,0 +1,18 @@
+﻿<Window x:Class="BullsCowsProject.Congratulations"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BullsCowsProject"
+        mc:Ignorable="d"
+        Title="You won!" Height="235.161" Width="436.503" ResizeMode="NoResize" Icon="Resources/icon.png" ShowInTaskbar="False" BorderBrush="Black">
+    <Grid Background="#FFB5CD20">
+        <Label x:Name="label" Content="Well Done" HorizontalAlignment="Left" Margin="16,39,0,0" VerticalAlignment="Top" FontSize="72" FontFamily="SketchFlow Print" FontWeight="Bold" Height="97" Width="387"/>
+        <Button x:Name="newGameButton" Content="Play again" HorizontalAlignment="Left" Margin="16,0,0,20" Width="85" Click="newGameButton_Click" FontFamily="ScetchFlow Print" FontWeight="Medium" FontSize="12" Background="#FF28DADA" Height="20" VerticalAlignment="Bottom"/>
+        <Button x:Name="exitButton" Content="Enough for today" HorizontalAlignment="Left" Margin="296,0,0,20" Width="107" Click="exitButton_Click" FontFamily="ScetchFlow Print" FontWeight="Medium" FontSize="12" Background="#FF28DADA" Height="20" VerticalAlignment="Bottom"/>
+        <Image x:Name="MedalImage" HorizontalAlignment="Left" Margin="155,122,0,10" Width="99"/>
+        <Button  x:Name="enterStatisticsButton" Content="Enter in the Statistics" Background="#FF28DADA" HorizontalAlignment="Left" Margin="256,10,0,0" VerticalAlignment="Top" Width="129" RenderTransformOrigin="0.263,0.554" Click="enterStatisticsButton_Click"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="131,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Name="txtName" Width="120" RenderTransformOrigin="0.022,0.425"/>
+
+    </Grid>
+</Window>
